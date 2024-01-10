@@ -8,17 +8,72 @@ body {
     font-size: 16px;
     margin: 0;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.max-width {
+    max-width: 1024px;
+    width: 100%;
 }
 
 header {
-    max-width: 1024px;
     width: 100%;
+    padding: 10px;
+    margin: 5px;
     font-size: 32px;
     font-weight: 700;
     background-color: rgb(221,221,221);
     color: rgb(102,103,110);
-    margin: 5px;
     text-transform: uppercase;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#letterbox {
+    display: flex;
+    gap: 10px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.letter {
+    background-color: lightgray;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.infocard {
+    border: 10px solid rgb(221,221,221);
     padding: 10px;
+    color: rgb(102,103,110);
+    text-decoration: none;
+    display: block;
+    width: calc(33% - 10px);
+    box-sizing: border-box;
+    margin: 5px
+}
+
+.infocard:hover {
+    border: 10px solid gray;
+}
+
+@media (max-width: 800px) {
+    .infocard {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 500px) {
+    .infocard {
+        width: calc(100% - 10px);
+    }
 }
