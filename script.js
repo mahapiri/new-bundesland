@@ -40,7 +40,7 @@ function renderLetters() {
     for (let i = 0; i < letters.length; i++) {
         const letter = letters[i];
         letterbox.innerHTML += /*html*/`
-            <div onclick="setfilter('${letter}')" class="letter">${letter}</div>
+            <div onclick="setFilter('${letter}')" class="letter">${letter}</div>
         `;
         
     }
